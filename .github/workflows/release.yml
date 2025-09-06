@@ -4,6 +4,9 @@ on:
   push:
     branches: [ lab1 ]
 
+permissions:
+  contents: write
+
 jobs:
   bump_version:
     runs-on: ubuntu-latest
