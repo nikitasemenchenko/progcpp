@@ -4,9 +4,6 @@ on:
   push:
     branches: [ lab1 ]
 
-permissions:
-  contents: write
-
 jobs:
   bump_version:
     runs-on: ubuntu-latest
@@ -53,7 +50,7 @@ jobs:
       - name: Build
         shell: bash
         run: | 
-          
+
           cmake -G "Ninja" -S . -B build \
             -DPROJECT_VERSION_MAJOR=${{ needs.bump_version.outputs.major }} \
             -DPROJECT_VERSION_MINOR=${{ needs.bump_version.outputs.minor }} \
@@ -64,9 +61,9 @@ jobs:
         shell: bash
         run: |
           if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
-            ./build/lab1.exe || true
+            ./build/lab1.exe
           else
-            ./build/lab1 || true
+            ./build/lab1
           fi
 
       - name: Package
@@ -76,7 +73,7 @@ jobs:
           && if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
                cpack -G ZIP --config build/CPackConfig.cmake;
              else
-               cpack -G TGZ --config build/CPackConfig.cmake;
+               cpack -G DEB --config build/CPackConfig.cmake;
              fi
 
       - name: Upload
