@@ -1,0 +1,12 @@
+C:/Users/nick/Desktop/lab1_actions/build/CMakeFiles/helloworld_cli.dir
+C:/Users/nick/Desktop/lab1_actions/build/CMakeFiles/helloworld.dir
+C:/Users/nick/Desktop/lab1_actions/build/CMakeFiles/test_version.dir
+C:/Users/nick/Desktop/lab1_actions/build/CMakeFiles/package.dir
+C:/Users/nick/Desktop/lab1_actions/build/CMakeFiles/package_source.dir
+C:/Users/nick/Desktop/lab1_actions/build/CMakeFiles/test.dir
+C:/Users/nick/Desktop/lab1_actions/build/CMakeFiles/edit_cache.dir
+C:/Users/nick/Desktop/lab1_actions/build/CMakeFiles/rebuild_cache.dir
+C:/Users/nick/Desktop/lab1_actions/build/CMakeFiles/list_install_components.dir
+C:/Users/nick/Desktop/lab1_actions/build/CMakeFiles/install.dir
+C:/Users/nick/Desktop/lab1_actions/build/CMakeFiles/install/local.dir
+C:/Users/nick/Desktop/lab1_actions/build/CMakeFiles/install/strip.dir
