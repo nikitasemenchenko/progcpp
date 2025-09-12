@@ -73,9 +73,9 @@ jobs:
         shell: bash
         run: |
           if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
-            ./build/lab1.exe
+            ./build/lab2.exe
           else
-            ./build/lab1
+            ./build/lab2
           fi
 
       - name: Run tests
