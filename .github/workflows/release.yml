@@ -81,7 +81,7 @@ jobs:
       - name: Run tests
         shell: bash
         run: |
-          ./build/GTestTests
+          ./build/gtest_tests/GTestTests
 
       - name: Package
         shell: bash
