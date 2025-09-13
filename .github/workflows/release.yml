@@ -28,14 +28,26 @@ jobs:
           last_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "1.0.0")
           last_tag=${last_tag#v}
           IFS='.' read -r major minor patch <<< "$last_tag"
-          patch=$((patch+1))
-          new_tag="$major.$minor.$patch"
-          echo "new_tag=$new_tag" >> "$GITHUB_OUTPUT"
-          echo "major=$major" >> "$GITHUB_OUTPUT"
-          echo "minor=$minor" >> "$GITHUB_OUTPUT"
-          echo "patch=$patch" >> "$GITHUB_OUTPUT"
-          git tag "$new_tag"
-          git push origin "$new_tag"
+
+          while true; do
+            patch=$((patch+1))
+            new_tag="$major.$minor.$patch"
+
+            if git rev-parse -q --verify "refs/tags/$new_tag" >/dev/null 2>&1; then
+              continue
+            fi
+            if git ls-remote --tags origin "refs/tags/$new_tag" | grep -q "$new_tag"; then
+              continue
+            fi
+
+            git tag "$new_tag"
+            git push origin "refs/tags/$new_tag"
+            echo "new_tag=$new_tag" >> "$GITHUB_OUTPUT"
+            echo "major=$major" >> "$GITHUB_OUTPUT"
+            echo "minor=$minor" >> "$GITHUB_OUTPUT"
+            echo "patch=$patch" >> "$GITHUB_OUTPUT"
+            break
+          done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
