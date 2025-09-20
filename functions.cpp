@@ -4,6 +4,7 @@
 #include <functional>
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 
 std::vector<std::string> split(const std::string &str, char d)
 {
@@ -46,14 +47,9 @@ std::vector<std::tuple<int, int, int, int>> parse(const std::string& file_name){
 }
 
 void mainSort(std::vector<std::tuple<int, int, int, int>>& start_vector){
-    for(int i = 0; i< start_vector.size(); i++){
-        for(int j = 0; j< start_vector.size()-1; j++){
-            if(start_vector[j]< start_vector[j+1]){
-                std::swap(start_vector[j],  start_vector[j+1]);
-
-            }
-        }
-    }
+    std::sort(start_vector.begin(), start_vector.end(), [](const auto& a, const auto& b) {
+    return a > b;
+});
 }
 
 void printFullList(std::vector<std::tuple<int, int, int, int>>& list_of_ip) {
