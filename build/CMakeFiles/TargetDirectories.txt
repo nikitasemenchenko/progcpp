@@ -1,9 +1,0 @@
-C:/Users/nick/Desktop/progcpp/build/CMakeFiles/lab3.dir
-C:/Users/nick/Desktop/progcpp/build/CMakeFiles/package.dir
-C:/Users/nick/Desktop/progcpp/build/CMakeFiles/package_source.dir
-C:/Users/nick/Desktop/progcpp/build/CMakeFiles/edit_cache.dir
-C:/Users/nick/Desktop/progcpp/build/CMakeFiles/rebuild_cache.dir
-C:/Users/nick/Desktop/progcpp/build/CMakeFiles/list_install_components.dir
-C:/Users/nick/Desktop/progcpp/build/CMakeFiles/install.dir
-C:/Users/nick/Desktop/progcpp/build/CMakeFiles/install/local.dir
-C:/Users/nick/Desktop/progcpp/build/CMakeFiles/install/strip.dir
