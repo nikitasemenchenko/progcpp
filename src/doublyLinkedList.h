@@ -1,4 +1,7 @@
 #pragma once
+#include <stdexcept>
+#include <iostream>
+#include <utility>
 #include <memory>
 
 template<typename T>
@@ -8,13 +11,13 @@ struct DoubleNode{
     std::weak_ptr<DoubleNode<T>> prev;
     DoubleNode(T& val){
         value = val;
-        next = nullptr;
-        prev = nullptr;
+        next.reset();
+        prev.reset();
     }
     DoubleNode(T&& val){
         value = std::move(val);
-        next = nullptr;
-        prev = nullptr;
+        next.reset();
+        prev.reset();
     }
 };
 
@@ -207,4 +210,21 @@ class doublyLinkedList {
                 return *this;
             }
         }
+        class Iterator {
+        DoubleNode<T>* ptr;
+        public:
+            Iterator(DoubleNode<T>* p){
+                ptr = p;
+            }
+            T& operator*() {return ptr->value;}
+            T& get() {return ptr->value;}
+            Iterator& operator++() {
+                if (ptr != nullptr) ptr = ptr->next.get();
+                return *this;
+            }
+            bool operator!=(const Iterator& other) {return ptr != other.ptr;}
+        };
+
+        Iterator begin() {return Iterator(head.get());}
+        Iterator end() {return Iterator(nullptr);}
 };

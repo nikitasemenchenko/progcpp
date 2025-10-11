@@ -131,4 +131,19 @@ class myvector {
                 return *this;
             }
         }
+
+        class Iterator {
+        T* ptr;
+        public:
+            Iterator(T* p){
+                ptr = p;
+            }
+            T& operator*() {return *ptr;}
+            T& get() {return *ptr;}
+            Iterator& operator++() {++ptr; return *this;}
+            bool operator!=(const Iterator& other) {return ptr != other.ptr;}
+        };
+
+    Iterator begin() {return Iterator(data.get());}
+    Iterator end() {return Iterator(data.get() + length);}
 };

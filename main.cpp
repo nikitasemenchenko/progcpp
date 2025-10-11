@@ -1,6 +1,7 @@
 #include <iostream>
 #include "myvector.h"
 #include "singlyLinkedList.h"
+#include "doublyLinkedList.h"
 
 int main(){
     std::cout << "myvector: "<<std::endl;
@@ -36,6 +37,11 @@ int main(){
     b.print();
     c.print();
 
+    for (auto i = c.begin(); i != c.end(); ++i){
+        std::cout << *i << " ";
+    }
+    std::cout << '\n';
+    
     std::cout << "\nsinglyLinkedList: "<<std::endl;
     singlyLinkedList<int> l;
 
@@ -70,8 +76,13 @@ int main(){
     n.print();
     k.print();
 
+    for (auto i = k.begin(); i != k.end(); ++i){
+        std::cout << *i << " ";
+    }
+    std::cout << '\n';
+
     std::cout << "\ndoublyLinkedList: "<<std::endl;
-    singlyLinkedList<int> w;
+    doublyLinkedList<int> w;
 
     for(int i = 0; i< 10; ++i){
         w.push_back(i);
@@ -90,18 +101,20 @@ int main(){
     w.insert(30, w.size());
     w.print();
 
-    singlyLinkedList<int> v = std::move(w);
+    doublyLinkedList<int> v = std::move(w);
     w.print();
     v.print();
 
-    singlyLinkedList<int> u;
+    doublyLinkedList<int> u;
     u = v;
     v.print();
     u.print();
 
-    singlyLinkedList<int> y;
+    doublyLinkedList<int> y;
     y = std::move(u);
     u.print();
     y.print();
 
+    for (auto i = k.begin(); i != k.end(); ++i)
+        std::cout << *i << " ";
 }

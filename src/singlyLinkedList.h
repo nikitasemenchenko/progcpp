@@ -1,4 +1,7 @@
 #pragma once
+#include <stdexcept>
+#include <iostream>
+#include <utility>
 #include <memory>
 
 template<typename T>
@@ -116,7 +119,7 @@ class singlyLinkedList {
     void insert(T& value, int position){
         if (position > length || position < 0) throw std::out_of_range("Index out of range");;
 
-        std::unique_ptr<Node<T>> newNode = std::make_unique<Node<T>>(std::move(value));
+        std::unique_ptr<Node<T>> newNode = std::make_unique<Node<T>>(value);
         if(position == 0){
             newNode->next = std::move(head);
             head = std::move(newNode);
@@ -181,4 +184,22 @@ class singlyLinkedList {
                 return *this;
             }
         }
+
+        class Iterator {
+        Node<T>* ptr;
+        public:
+            Iterator(Node<T>* p){
+                ptr = p;
+            }
+            T& operator*() {return ptr->value;}
+            T& get() {return ptr->value;}
+            Iterator& operator++() {
+                if (ptr != nullptr) ptr = ptr->next.get();
+                return *this;
+            }
+            bool operator!=(const Iterator& other) {return ptr != other.ptr;}
+        };
+
+        Iterator begin() {return Iterator(head.get());}
+        Iterator end() {return Iterator(nullptr);}
 };

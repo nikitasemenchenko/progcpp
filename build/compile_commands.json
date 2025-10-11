@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/nick/Desktop/progcpp/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/lab3.dir/includes_CXX.rsp -g -o CMakeFiles\\lab3.dir\\main.cpp.obj -c C:\\Users\\nick\\Desktop\\progcpp\\main.cpp",
+  "file": "C:/Users/nick/Desktop/progcpp/main.cpp",
+  "output": "CMakeFiles/lab3.dir/main.cpp.obj"
+}
+]
