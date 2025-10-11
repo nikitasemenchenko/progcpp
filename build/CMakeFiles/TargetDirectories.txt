@@ -1,0 +1,9 @@
+C:/Users/nick/Desktop/lab3/build/CMakeFiles/lab3.dir
+C:/Users/nick/Desktop/lab3/build/CMakeFiles/package.dir
+C:/Users/nick/Desktop/lab3/build/CMakeFiles/package_source.dir
+C:/Users/nick/Desktop/lab3/build/CMakeFiles/edit_cache.dir
+C:/Users/nick/Desktop/lab3/build/CMakeFiles/rebuild_cache.dir
+C:/Users/nick/Desktop/lab3/build/CMakeFiles/list_install_components.dir
+C:/Users/nick/Desktop/lab3/build/CMakeFiles/install.dir
+C:/Users/nick/Desktop/lab3/build/CMakeFiles/install/local.dir
+C:/Users/nick/Desktop/lab3/build/CMakeFiles/install/strip.dir
