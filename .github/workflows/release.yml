@@ -65,7 +65,6 @@ jobs:
       - name: Build
         shell: bash
         run: | 
-          rm -rf build
           cmake -G "Ninja" -S . -B build \
             -DPROJECT_VERSION_MAJOR=${{ needs.bump_version.outputs.major }} \
             -DPROJECT_VERSION_MINOR=${{ needs.bump_version.outputs.minor }} \

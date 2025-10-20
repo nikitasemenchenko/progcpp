@@ -1,7 +1,7 @@
 #include <iostream>
 #include <map>
-#include "myAllocator.h"   // ← убедись, что имя файла совпадает!
-#include "myVector.h"
+#include "headers/myAllocator.h"
+#include "headers/myvector.h"
 
 int factorial(int n) {
     if (n == 0) return 1;
