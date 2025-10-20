@@ -21,7 +21,6 @@ set(CPACK_OUTPUT_FILE_PREFIX "${CMAKE_BINARY_DIR}/package")
 
 
 add_executable(lab4 main.cpp)
-target_include_directories(lab4 PRIVATE headers)
 
 set(CPACK_PACKAGE_NAME "Lab3")
 set(CPACK_OUTPUT_FILE_PREFIX "${CMAKE_BINARY_DIR}/package")
