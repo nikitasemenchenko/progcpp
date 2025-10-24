@@ -77,8 +77,10 @@ jobs:
           cmake -G "Ninja" -S . -B build \
             -DPROJECT_VERSION_MAJOR=${{ needs.bump_version.outputs.major }} \
             -DPROJECT_VERSION_MINOR=${{ needs.bump_version.outputs.minor }} \
-            -DPATCH_VERSION=${{ needs.bump_version.outputs.patch }} 
+            -DPATCH_VERSION=${{ needs.bump_version.outputs.patch }} \
+            -DCMAKE_INSTALL_PREFIX=${{ github.workspace }}/build/package
           cmake --build build
+
 
       - name: Package
         shell: bash
