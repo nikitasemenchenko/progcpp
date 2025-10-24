@@ -102,12 +102,15 @@ class myAllocator {
     }
     //поэлементное освобождение
     void deallocate(T* p, size_t n) noexcept {
-    if (n == 1) {
-        vecOfFree.push_back(p);
-    } else {
-        ::operator delete(p);
+        size_t bytes = n * sizeof(T);
+        if (n == 1) {
+            vecOfFree.push_back(p);
+            
+        } else {
+            ::operator delete(p);
+        }
+        std::cout << "\ndeallocated " << bytes << " bytes";
     }
-}
 
     size_t getBlockSize() const {
         return blockSize;
