@@ -77,10 +77,6 @@ double Ball::getMass() const {
     return M_PI*pow(ballRad, 3) *4.0/3.0;
 }
 
-Color Ball::getColor() const {
-    return ballColor;
-}
-
 bool Ball::getCollision() const {
     return isCollidable;
 }

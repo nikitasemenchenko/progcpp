@@ -94,9 +94,9 @@ void Physics::processCollision(Ball& a, Ball& b, double distanceBetweenCenters2,
     Color col = Color(0, 0, 0);
 
     int particles = 10;
-    double speed = 100;
+    double speed = 150;
     double lifeTime = 1;
-    double rad = 10.0;
+    double rad = 5.0;
 
     for (int i = 0; i < particles; ++i) {
         double ang = 2.0 * M_PI *static_cast<double>(i) / particles;

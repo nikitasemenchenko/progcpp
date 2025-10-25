@@ -19,6 +19,5 @@ public:
     Point getCenter() const;
     double getRadius() const;
     double getMass() const;
-    Color getColor() const;
     bool getCollision() const;
 };
