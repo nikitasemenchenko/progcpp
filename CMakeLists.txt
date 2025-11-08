@@ -19,8 +19,6 @@ set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${P
 set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-${CMAKE_SYSTEM_NAME}")
 set(CPACK_OUTPUT_FILE_PREFIX "${CMAKE_BINARY_DIR}/package")
 
-include(CPack)
-
 add_executable(lab6 main.cpp model/Document.cpp model/Circle.cpp model/Square.cpp controller/Controller.cpp view/View.cpp)
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
@@ -28,3 +26,6 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/controller
     ${CMAKE_CURRENT_SOURCE_DIR}/view
 )
+
+install(TARGETS lab6 DESTINATION bin)
+include(CPack)
