@@ -1,8 +1,8 @@
 #pragma once
-#include "ShapeInterface.h"
+#include "FigureInterface.h"
 #include <string>
 
-class Square: public ShapeInterface {
+class Square: public FigureInterface {
     private:
         int id;
         double side;

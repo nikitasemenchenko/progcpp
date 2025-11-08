@@ -14,6 +14,6 @@ class Controller: public ControllerInterface {
         std::shared_ptr<DocumentInterface> createNewDocument() override;
         std::shared_ptr<DocumentInterface> importDocument(const std::string& filename) override;
         void exportDocument(const std::shared_ptr<DocumentInterface>& document, const std::string& filename) override;
-        void addShapeToDocument(std::shared_ptr<DocumentInterface>& document, std::unique_ptr<ShapeInterface> shape) override;
-        void removeShapeFromDocument(std::shared_ptr<DocumentInterface>& document, int shapeId) override;
+        void addFigureToDocument(std::shared_ptr<DocumentInterface>& document, std::unique_ptr<FigureInterface> Figure) override;
+        void removeFigureFromDocument(std::shared_ptr<DocumentInterface>& document, int FigureId) override;
 };

@@ -12,12 +12,12 @@ int main(){
     auto doc = controller->createNewDocument();
     auto circle = std::make_unique<Circle>(5.0);
     auto square = std::make_unique<Square>(10.0);
-    controller->addShapeToDocument(doc, std::move(circle));
-    controller->addShapeToDocument(doc, std::move(square));
+    controller->addFigureToDocument(doc, std::move(circle));
+    controller->addFigureToDocument(doc, std::move(square));
 
     view->render(*doc);
 
-    controller->removeShapeFromDocument(doc, 1);
+    controller->removeFigureFromDocument(doc, 1);
     view->render(*doc);
 
     controller->exportDocument(doc, "document.graphic");

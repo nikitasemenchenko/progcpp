@@ -1,5 +1,5 @@
 #include "Document.h"
-#include "ShapeInterface.h"
+#include "FigureInterface.h"
 #include <iostream>
 
 int Document::nextId = 1;
@@ -10,19 +10,19 @@ int Document::getId() const {
     return id;
 }
 
-void Document::addShape(std::unique_ptr<ShapeInterface> shape) {
-    shapes.push_back(std::move(shape));
+void Document::addFigure(std::unique_ptr<FigureInterface> Figure) {
+    Figures.push_back(std::move(Figure));
 }
 
-void Document::deleteShape(int shapeId){
-    for(int i = 0; i < shapes.size(); ++i){
-        if(shapes[i]->getId() == shapeId){
-            shapes.erase(shapes.begin() +i);
+void Document::deleteFigure(int FigureId){
+    for(int i = 0; i < Figures.size(); ++i){
+        if(Figures[i]->getId() == FigureId){
+            Figures.erase(Figures.begin() +i);
             break;
         }
     }
 }
 
-const std::vector<std::unique_ptr<ShapeInterface>>& Document::getShapes() const {
-    return shapes;
+const std::vector<std::unique_ptr<FigureInterface>>& Document::getFigures() const {
+    return Figures;
 }

@@ -4,9 +4,9 @@
 
 //интерфейс графических объектов
 //отвечает только за свои данные и отображение
-class ShapeInterface {
+class FigureInterface {
     public:
-        virtual ~ShapeInterface() = default;
+        virtual ~FigureInterface() = default;
         virtual int getId() const = 0;
         virtual std::string getType() const = 0;
         virtual void draw() const = 0;

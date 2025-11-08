@@ -3,7 +3,7 @@
 
 void View::render(const DocumentInterface &document) const {
     std::cout << "printing document #" << document.getId() << std::endl;
-    for(auto &shape: document.getShapes()){
-        shape->draw();
+    for(auto &Figure: document.getFigures()){
+        Figure->draw();
     }
 }

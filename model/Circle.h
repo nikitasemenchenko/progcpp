@@ -1,8 +1,8 @@
 #pragma once
-#include "ShapeInterface.h"
+#include "FigureInterface.h"
 #include <string>
 
-class Circle: public ShapeInterface {
+class Circle: public FigureInterface {
     private:
         int id;
         double radius;

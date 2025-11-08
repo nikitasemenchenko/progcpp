@@ -27,14 +27,14 @@ void Controller::exportDocument(const std::shared_ptr<DocumentInterface> &docume
     std::cout<< "Exported document #" << document->getId()<<" in file "<< filename << std::endl;
 }
 
-void Controller::addShapeToDocument(std::shared_ptr<DocumentInterface> &document, std::unique_ptr<ShapeInterface> shape){
-    int shapeId = shape->getId();
-    std::string shapeType = shape->getType();
-    document->addShape(std::move(shape));
-    std::cout << "Added figure " << shapeType << " #" << shapeId << " in the document #" << document->getId() << std::endl;
+void Controller::addFigureToDocument(std::shared_ptr<DocumentInterface> &document, std::unique_ptr<FigureInterface> Figure){
+    int FigureId = Figure->getId();
+    std::string FigureType = Figure->getType();
+    document->addFigure(std::move(Figure));
+    std::cout << "Added figure " << FigureType << " #" << FigureId << " in the document #" << document->getId() << std::endl;
 }
 
-void Controller::removeShapeFromDocument(std::shared_ptr<DocumentInterface> &document, int shapeId){
-    document->deleteShape(shapeId);
-    std::cout << "Deleted figure #" << shapeId << " from the document #" << document->getId() << std::endl;
+void Controller::removeFigureFromDocument(std::shared_ptr<DocumentInterface> &document, int FigureId){
+    document->deleteFigure(FigureId);
+    std::cout << "Deleted figure #" << FigureId << " from the document #" << document->getId() << std::endl;
 }
