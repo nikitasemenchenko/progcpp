@@ -19,6 +19,13 @@ set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${P
 set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-${CMAKE_SYSTEM_NAME}")
 set(CPACK_OUTPUT_FILE_PREFIX "${CMAKE_BINARY_DIR}/package")
 
+if(WIN32)
+  set(CPACK_GENERATOR "ZIP")
+elseif(UNIX)
+  set(CPACK_GENERATOR "DEB")
+  set(CPACK_DEBIAN_PACKAGE_MAINTAINER "nas97 <nas97@tpu.ru>")
+endif()
+
 add_executable(lab6 main.cpp model/Document.cpp model/Circle.cpp model/Square.cpp controller/Controller.cpp view/View.cpp)
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
