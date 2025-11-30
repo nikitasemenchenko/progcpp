@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/Users/nick/Desktop/lab7/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DBOOST_CONTAINER_DYN_LINK -DBOOST_CONTAINER_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK=1 -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -IC:/Users/nick/Desktop/lab7/headers -g -std=gnu++17 -o CMakeFiles\\lab7.dir\\main.cpp.obj -c C:\\Users\\nick\\Desktop\\lab7\\main.cpp",
+  "file": "C:\\Users\\nick\\Desktop\\lab7\\main.cpp",
+  "output": "CMakeFiles\\lab7.dir\\main.cpp.obj"
+},
+{
+  "directory": "C:/Users/nick/Desktop/lab7/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DBOOST_CONTAINER_DYN_LINK -DBOOST_CONTAINER_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK=1 -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -IC:/Users/nick/Desktop/lab7/headers -g -std=gnu++17 -o CMakeFiles\\lab7.dir\\cpp\\Finder.cpp.obj -c C:\\Users\\nick\\Desktop\\lab7\\cpp\\Finder.cpp",
+  "file": "C:\\Users\\nick\\Desktop\\lab7\\cpp\\Finder.cpp",
+  "output": "CMakeFiles\\lab7.dir\\cpp\\Finder.cpp.obj"
+},
+{
+  "directory": "C:/Users/nick/Desktop/lab7/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DBOOST_CONTAINER_DYN_LINK -DBOOST_CONTAINER_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK=1 -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -IC:/Users/nick/Desktop/lab7/headers -g -std=gnu++17 -o CMakeFiles\\lab7.dir\\cpp\\Hasher.cpp.obj -c C:\\Users\\nick\\Desktop\\lab7\\cpp\\Hasher.cpp",
+  "file": "C:\\Users\\nick\\Desktop\\lab7\\cpp\\Hasher.cpp",
+  "output": "CMakeFiles\\lab7.dir\\cpp\\Hasher.cpp.obj"
+},
+{
+  "directory": "C:/Users/nick/Desktop/lab7/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DBOOST_CONTAINER_DYN_LINK -DBOOST_CONTAINER_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK=1 -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -IC:/Users/nick/Desktop/lab7/headers -g -std=gnu++17 -o CMakeFiles\\lab7.dir\\cpp\\Parser.cpp.obj -c C:\\Users\\nick\\Desktop\\lab7\\cpp\\Parser.cpp",
+  "file": "C:\\Users\\nick\\Desktop\\lab7\\cpp\\Parser.cpp",
+  "output": "CMakeFiles\\lab7.dir\\cpp\\Parser.cpp.obj"
+},
+{
+  "directory": "C:/Users/nick/Desktop/lab7/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DBOOST_CONTAINER_DYN_LINK -DBOOST_CONTAINER_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK=1 -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -IC:/Users/nick/Desktop/lab7/headers -g -std=gnu++17 -o CMakeFiles\\lab7.dir\\cpp\\Scanner.cpp.obj -c C:\\Users\\nick\\Desktop\\lab7\\cpp\\Scanner.cpp",
+  "file": "C:\\Users\\nick\\Desktop\\lab7\\cpp\\Scanner.cpp",
+  "output": "CMakeFiles\\lab7.dir\\cpp\\Scanner.cpp.obj"
+}
+]
