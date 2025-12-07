@@ -1,0 +1,67 @@
+body {
+    font-family: Arial;
+    background: #f2f4f8;
+}
+
+.app-container {
+    max-width: 720px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.1);
+}
+
+.app-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.task-input {
+    padding: 10px 10px;
+    font-size: 15px;
+    border: 1px solid #d8dde6;
+    border-radius: 10px;
+}
+
+
+.add-button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+
+.tasks-container {
+    margin-top: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background: #fbfdff;
+    margin-bottom: 10px;
+    border: 1px solid #eef2f6;
+}
+
+.task-text {
+    font-size: 16px;
+    word-break: break-word;
+}
+
+.delete-button {
+    background: #ff5c5c;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+}
